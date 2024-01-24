@@ -3,6 +3,7 @@
   "Description": "Various ui and client changes to fix bugs and add better support for mods",
   "Version": "1.0.0",
   "LoadPriority": 0,
+  "InitScript": "cl_northstar_client_init.nut",
   "ConVars": [
     {
       "Name": "filter_hide_empty",
@@ -53,6 +54,20 @@
       "RunOn": "CLIENT"
     },
     {
+			"Path": "presence/ui_presence.nut",
+			"RunOn": "UI",
+			"UICallback": {
+				"After": "NSUpdateGameStateUIStart"
+			}
+		},
+		{
+			"Path": "presence/cl_presence.nut",
+			"RunOn": "CLIENT",
+			"ClientCallback": {
+				"After": "NSUpdateGameStateClientStart"
+			}
+		},
+    {
       "Path": "ui/menu_ns_modmenu.nut",
       "RunOn": "UI",
       "UICallback": {
@@ -65,20 +80,6 @@
       "RunOn": "UI",
       "UICallback": {
         "After": "NS_SetVersionLabel"
-      }
-    },
-    {
-      "Path": "presence/ui_presence.nut",
-      "RunOn": "UI",
-      "UICallback": {
-        "After": "NSUpdateGameStateUIStart"
-      }
-    },
-    {
-      "Path": "presence/cl_presence.nut",
-      "RunOn": "CLIENT",
-      "ClientCallback": {
-        "After": "NSUpdateGameStateClientStart"
       }
     },
     {

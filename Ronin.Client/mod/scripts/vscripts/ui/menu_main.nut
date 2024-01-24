@@ -651,7 +651,7 @@ void function UpdateTrialLabel()
 	//bool lastIsTrialVersion = Script_IsRunningTrialVersion()
 
 	Hud_SetColor( file.trialLabel, 103, 252, 133, 255 )
-	Hud_SetText( file.trialLabel, "+ RONIN" )
+	Hud_SetText( file.trialLabel, "+ RONIN 2: The Sequel" )
 	Hud_SetVisible( file.trialLabel, true )
 
 	//while ( GetTopNonDialogMenu() == file.menu )
